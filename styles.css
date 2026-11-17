@@ -315,8 +315,41 @@ footer strong {
 }
 
 @media (max-width: 780px) {
+  .nav {
+    flex-wrap: wrap;
+    padding: 12px 18px;
+    gap: 10px;
+  }
+
+  .brand {
+    order: 1;
+    font-size: 1.05rem;
+  }
+
+  .nav .call {
+    order: 2;
+    padding: 9px 14px;
+    font-size: 0.88rem;
+  }
+
   nav {
-    display: none;
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    border-top: 1px solid #232a35;
+    padding-top: 10px;
+    max-height: 45px;
+    opacity: 1;
+    overflow: hidden;
+    transition: max-height 0.25s ease, opacity 0.2s ease, padding-top 0.25s ease, border-color 0.25s ease;
+  }
+
+  header.nav-hidden nav {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+    border-top-color: transparent;
+    pointer-events: none;
   }
 
   .hero {
